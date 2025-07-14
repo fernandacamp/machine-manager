@@ -139,7 +139,22 @@ Em seguida instale as dependencias
 ```bash
 npm install
 ```
-Configure o arquivo `.env` apontando para a sua base de dados. Depois rode:
+
+Modifique o arquivo `.env` na raiz do projeto com seus respectivos valores de sua máquina:
+```env
+# .env
+
+PORT=3000                   //Porta que rodará a API
+
+DB_HOST=localhost           //Endereço de conexão com o banco de dados
+DB_PORT=5432                //Porta de conexão
+DB_USERNAME=postgres        //Usuario de acesso
+DB_PASSWORD=postgres        //Senha de acesso
+DB_NAME=machine_db          //Database
+DB_SYNCHRONIZE=true         //Sincronização com o as entidades
+DB_LOGGING=true             //Logs de chamadas
+```
+Depois rode:
 ```bash
 npm run start:dev
 ```
