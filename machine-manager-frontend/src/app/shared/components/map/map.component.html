@@ -1,0 +1,9 @@
+
+<h1>Localização das máquinas</h1>
+<google-map height="400px" width="100%" [center]="center" [zoom]="14">
+  @for (machine of machinesWithCoordinates; track machine.id) {
+    <map-marker [position]="machine.coordinates"
+        [label]="machine.name">
+    </map-marker>
+  }
+</google-map>

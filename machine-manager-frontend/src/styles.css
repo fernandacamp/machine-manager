@@ -1,0 +1,28 @@
+@import './styles/fonts.css';
+@import './styles/colors.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-snackbar {
+  border-radius: 5px;
+  outline-offset: 2px;
+}
+
+.custom-snackbar .mdc-snackbar__action {
+  color: var(--white) !important;
+}
+
+.mat-mdc-snack-bar-container.app-snackbar-success {
+  --mdc-snackbar-container-color: var(--green);
+  --mdc-snackbar-supporting-text-color: var(--white);
+}
+
+.mat-mdc-snack-bar-container.app-snackbar-error {
+  --mdc-snackbar-container-color: var(--red);
+  --mdc-snackbar-supporting-text-color: var(--white);
+}
+
+.mat-mdc-snack-bar-container.app-snackbar-warning {
+  --mdc-snackbar-container-color: var(--yellow);
+  --mdc-snackbar-supporting-text-color: var(--gray-dark);
+}

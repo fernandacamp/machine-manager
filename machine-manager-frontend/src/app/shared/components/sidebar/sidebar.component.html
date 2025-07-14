@@ -1,0 +1,24 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened class="sidenav" fixedInViewport>
+
+        <div class="logo">
+            <img src="assets/logo/logo.png" alt="Logo" class="sidebar-logo-img" />
+        </div>
+
+        <mat-nav-list>
+
+            <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{exact:true}">
+                <mat-icon svgIcon="dashboard"></mat-icon>
+                <span>Dashboard</span>
+            </a>
+
+            <a mat-list-item routerLink="/machines/create" routerLinkActive="active-link">
+                <mat-icon svgIcon="create"></mat-icon>
+                <span>Cadastrar máquina</span>
+            </a>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+</mat-sidenav-container>

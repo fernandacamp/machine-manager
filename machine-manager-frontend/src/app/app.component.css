@@ -1,0 +1,15 @@
+.app-container {
+  height: 100vh;
+}t
+
+.app-sidebar {
+  width: 260px;
+  background-color: var(--white);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-content {
+  padding: 24px;
+  background-color: var(--blue-soft);
+}
+

@@ -1,0 +1,23 @@
+@if (machine) {
+  <ng-container>
+    <mat-card>
+      <mat-card-title>Detalhes da Máquina</mat-card-title>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item>
+            <span class="label">Nome:</span>
+            <span class="value">{{ machine.name }}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <span class="label">Localização:</span>
+            <span class="value">{{ machine.location }}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <span class="label">Status atual:</span>
+            <app-machine-status [status]="machine.status"></app-machine-status>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+}

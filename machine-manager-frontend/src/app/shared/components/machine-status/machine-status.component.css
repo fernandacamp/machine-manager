@@ -1,0 +1,22 @@
+.status-chip {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--white);
+  border-radius: 999px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status-operating {
+  background-color: var(--green);
+}
+
+.status-maintenance {
+  background-color: var(--orange);
+}
+
+.status-off {
+  background-color: var(--red);
+}

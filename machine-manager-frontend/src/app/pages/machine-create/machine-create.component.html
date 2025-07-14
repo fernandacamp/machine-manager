@@ -1,0 +1,63 @@
+<form (ngSubmit)="save(form)" #form="ngForm" class="form-wrapper" novalidate>
+
+    <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nome da máquina</mat-label>
+        <input matInput 
+        type="text" 
+        placeholder="Digite o nome da máquina" 
+        [(ngModel)]="machine.name" 
+        name="name" 
+        required
+        #name="ngModel"
+        [disabled]="editMode">
+
+        @if (name.invalid && name.touched) {
+            <mat-error>Nome da máquina é obrigatório.</mat-error>
+        }
+
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Localização</mat-label>
+        <input matInput 
+        type="text"
+        placeholder="Digite a localização" 
+        [(ngModel)]="machine.location" 
+        name="location" 
+        required
+        #location="ngModel">
+
+        @if (location.invalid && location.touched) {
+            <mat-error>Localização é obrigatória.</mat-error>
+        }
+
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Status</mat-label>
+        <mat-select matNativeControl [(ngModel)]="machine.status" 
+        name="statusField" 
+        required 
+        #status="ngModel">
+
+            <mat-option value="" disabled>Selecione o status</mat-option>
+            @for (statusOption of statusOptions; track statusOption[0]) {
+                <mat-option [value]="statusOption[0]">
+                    {{statusOption[1]}}
+                </mat-option>
+            }
+
+        </mat-select>
+        
+
+        @if (status.invalid && status.touched) {
+            <mat-error>Status é obrigatório.</mat-error>
+        }
+
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        Salvar
+    </button>
+
+</form>

@@ -1,0 +1,22 @@
+:root {
+  /* Cores principais */
+  --blue: #0D76A7;          
+  --blue-light: #3DA9FC;    
+  --blue-soft: #E6F0F8;     
+
+  /* Cores neutras */
+  --white: #FFFFFF;         
+  --gray-light: #F2F2F2;    
+  --gray-medium: #9CA3AF;  
+  --gray-dark: #1F2937;     
+
+  /* Cores de status */
+  --orange: #F59E0B;       
+  --green: #10B981;        
+  --red: #EF4444;          
+  --yellow: #FACC15;       
+
+  /* Sombras e bordas */
+  --border-color: #E5E7EB;
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.05);
+}

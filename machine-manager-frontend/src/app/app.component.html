@@ -1,0 +1,17 @@
+<mat-sidenav-container class="app-container">
+
+  <mat-sidenav 
+    class="app-sidebar"
+    mode="side" 
+    opened 
+    [fixedInViewport]="true">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="app-content">
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

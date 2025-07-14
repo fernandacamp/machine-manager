@@ -1,0 +1,33 @@
+.dashboard-container {
+    padding: 24px;
+    color: var(--gray-dark);
+}
+
+.cards {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.filter-bar {
+    margin-bottom: 16px;
+}
+
+.filter-bar input {
+    padding: 8px 12px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--white);
+    color: var(--gray-dark);
+    font-size: var(--font-size-base);
+    box-shadow: var(--shadow-light);
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

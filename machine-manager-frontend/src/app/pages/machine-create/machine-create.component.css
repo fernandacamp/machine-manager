@@ -1,0 +1,66 @@
+.form-wrapper {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button[mat-raised-button] {
+  width: 100%;
+  padding: 14px 0;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  border-radius: 8px;
+  background-color: var(--blue);
+  color: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+button[mat-raised-button]:hover:not(:disabled) {
+  background-color: var(--blue-light);
+}
+
+button[mat-raised-button]:disabled {
+  background-color: var(--gray-light);
+  color: var(--gray-medium);
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin-top: 16px;
+  color: var(--red);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  font-size: var(--font-size-base);
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-dark);
+  font-weight: var(--font-weight-medium);
+}
+
+.mat-input-element {
+  font-size: var(--font-size-base);
+}
+
+.mat-select-value-text {
+  font-size: var(--font-size-base);
+}
+.mat-form-field-outline {
+  border-color: var(--border-color);
+}

@@ -123,10 +123,10 @@ Acesse o PostgreSQL e crie a base de dados chamada `machine_db`:
 CREATE DATABASE machine_db;
 ```
 
-Clone o projeto do github com o comando:
+Clone o projeto do GitHub com o comando:
 
 ```bash
-git clone https://github.com/seu-usuario/machine-manager-backend.git
+git clone https://github.com/fernandacamp/machine-manager.git
 ```
 
 ### Backend

@@ -1,0 +1,64 @@
+.mat-paginator {
+  background-color: var(--white);
+  border-top: 1px solid var(--border-color);
+
+  border-bottom-left-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+
+  box-shadow: var(--shadow-light);
+  padding: 10px 20px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.mat-paginator:hover {
+  box-shadow: 0 4px 8px rgba(13, 118, 167, 0.15); 
+}
+
+.mat-paginator .mat-button {
+  color: var(--blue);
+  font-weight: 600;
+  text-transform: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.mat-paginator .mat-button:hover {
+  background-color: var(--blue-light);
+  color: var(--white);
+}
+
+.mat-paginator .mat-paginator-range-label {
+  color: var(--gray-dark);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-right: 12px;
+}
+
+.mat-paginator .mat-paginator-range-actions,
+.mat-paginator .mat-paginator-navigation-next,
+.mat-paginator .mat-paginator-navigation-previous,
+.mat-paginator .mat-paginator-navigation-first,
+.mat-paginator .mat-paginator-navigation-last {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.mat-paginator .mat-icon-button {
+  color: var(--blue-light);
+  transition: color 0.3s ease;
+}
+
+.mat-paginator .mat-icon-button:hover {
+  color: var(--blue);
+}
