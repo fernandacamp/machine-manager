@@ -11,6 +11,7 @@ import { SnacbarType, SnackbarService } from '../../services/snackbar/snackbar.s
 import { MachineStatus } from '../../core/enums/status-machine.enum';
 import { FormsModule } from '@angular/forms';
 import { MapComponent } from "../../shared/components/map/map.component";
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dashboard',
@@ -35,7 +36,7 @@ export class DashboardComponent implements OnInit {
     [MachineStatus.OFF, 'Desligada']
   ]);
 
-  constructor(private machineService: MachineService, private snackbarService: SnackbarService) { }
+  constructor(private machineService: MachineService, private snackbarService: SnackbarService, private title: Title) { }
 
   page: number = 1;
   pageSize: number = 10;
@@ -44,6 +45,7 @@ export class DashboardComponent implements OnInit {
   searchTerm: string = ''; 
 
   ngOnInit() {
+    this.title.setTitle('Dashboard')
     this.statusSelect = undefined;
     this.getMachines();
   }

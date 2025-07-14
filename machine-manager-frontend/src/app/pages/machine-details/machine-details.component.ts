@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MachineStatus } from '../../core/enums/status-machine.enum';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-machine-details',
@@ -23,9 +24,15 @@ export class MachineDetailsComponent implements OnInit {
   machineId?: string;
   machine?: Machine;
 
-  constructor(private route: ActivatedRoute, private machineService: MachineService, private snackbarService: SnackbarService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private machineService: MachineService,
+    private snackbarService: SnackbarService, 
+    private title: Title
+  ) {}
 
   ngOnInit() {
+    this.title.setTitle('Detalhes')
     this.machineId = this.route.snapshot.params['id'];
     this.loadMachineDetails();
   }

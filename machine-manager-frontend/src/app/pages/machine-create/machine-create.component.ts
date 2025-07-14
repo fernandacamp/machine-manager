@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Telemetry } from '../../core/models/telemetry.model';
 import { GeocodingService } from '../../services/geocoding/geocoding.service';
 import { GeocodingModel } from '../../core/models/geocoding.model';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-machine-create',
@@ -38,7 +39,8 @@ export class MachineCreateComponent implements OnInit {
     private snackbarService: SnackbarService, 
     private router: Router, 
     private route: ActivatedRoute,
-    private geocodingService: GeocodingService
+    private geocodingService: GeocodingService, 
+    private title: Title
   ) { }
 
   ngOnInit() {
@@ -48,6 +50,8 @@ export class MachineCreateComponent implements OnInit {
       this.editMode = true;
       this.loadMachineDetails();
     }
+    
+    this.title.setTitle(`${this.editMode ? 'Editar' : 'Criar'} máquina`)
   }
 
   loadMachineDetails() {
